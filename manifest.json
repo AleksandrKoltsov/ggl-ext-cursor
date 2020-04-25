@@ -1,0 +1,47 @@
+{
+    "name": "Cursor Changer",
+    "version": "5.0",
+    "description": "Change cursor!",
+    "permissions":["activeTab","declarativeContent","storage", "webview", "<all_urls>","DeclarativeWebRequest"],
+    "background" :{
+      "scripts":["background.js"],
+      "persistent":false
+    },
+    "content_scripts":[{
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["/contentScript.js"]
+    }],
+    "page_action":{
+      "default_popup":"popup.html",
+      "default_icon": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+      }
+    },
+    "web_accessible_resources": [
+      "images/cursors/1.cur",
+      "images/cursors/2.cur",
+      "images/cursors/3.cur",
+      "images/cursors/4.cur",
+      "images/cursors/5.cur",
+      "images/cursors/6.cur",
+      "images/cursors/7.cur",
+      "images/cursors/8.cur",
+      "images/cursors/9.cur",
+      "images/cursors/10.cur",
+      "images/cursors/11.cur",
+      "images/cursors/12.cur",
+      "images/cursors/13.cur",
+      "images/cursors/14.cur"
+    ],
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    },
+    "manifest_version": 2
+  }
